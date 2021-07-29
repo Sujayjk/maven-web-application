@@ -2,7 +2,7 @@ pipeline{
 agent any;
 tools{maven 'maven3.6.3'}
 triggers{
-cron('* * * * *')
+pollSCM('* * * * *')
 }
 stages{
   stage('CheckOutCode'){
@@ -19,7 +19,6 @@ stage('ExecuteSonarQubeReport'){
     sh "mvn clean sonar:sonar"
 }
 }
-/*
 stage('UploadArtifactsIntoNexus'){
   steps{
     sh "mvn clean deploy"
@@ -32,7 +31,6 @@ stage('DeployAppIntoTomcat'){
     	}
    }
   }
-  */
   }//stages closing
   post{
   
