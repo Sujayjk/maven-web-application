@@ -5,7 +5,7 @@ triggers{
 pollSCM('* * * * *')
 }
 options{
-timestamp()
+    timestamps()
 }
 stages{
   stage('CheckOutCode'){
