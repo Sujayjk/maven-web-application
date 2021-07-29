@@ -9,6 +9,7 @@ git branch: 'development', credentialsId: 'f84471ac-b9d7-4d5a-980b-28aee7880325'
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
+/*
 stage('ExecuteSonarQubeReport'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
 }
@@ -27,4 +28,5 @@ Regards
 Sujay jk
 Seoyon E Hwa penukonda''', subject: 'Build over!!', to: 'sujaydevops99@gmail.com,jskubsad1960@gmail.com'
 }
+*/
 }
