@@ -15,7 +15,6 @@ sh "${mavenHome}/bin/mvn sonar:sonar"
 stage('UploadArtifactIntoNexus'){
 sh "${mavenHome}/bin/mvn deploy"
 }
-/* 
 stage('DeployAppIntoTomcatServer'){
 sshagent(['98a34273-d178-4ae5-9e81-6ba7f388d788']) {
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.233.114.38:/opt/apache-tomcat-9.0.50/webapps/"
@@ -28,5 +27,4 @@ Regards
 Sujay jk
 Seoyon E Hwa penukonda''', subject: 'Build over!!', to: 'sujaydevops99@gmail.com,jskubsad1960@gmail.com'
 }
-*/
 }
